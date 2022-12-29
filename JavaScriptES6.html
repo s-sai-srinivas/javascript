@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ES6</title>
+	<script>
+		// ES6 -> ECMA Script 6 (2015)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			1. Template Strings
+			- Should start and end with backtick (`)
+			- To use variables: ${}
+		*/
+
+		// let rajashekar = {
+		// 	firstName: 'Rajashekar',
+		// 	lastName: 'Ballu',
+		// 	batchNo: 22,
+		// 	city: 'Bangalore',
+		// 	state: 'Karnataka',
+		// 	country: 'India'
+		// }
+
+		// console.log("My name is " + rajashekar.firstName + ' ' + rajashekar.lastName + ". I'm from batch " + rajashekar.batchNo + ". I hail from " + rajashekar.city + ', ' + rajashekar.state + ', ' + rajashekar.country + '.')
+
+		// console.log(`My name is ${rajashekar.firstName} ${rajashekar.lastName}. I'm from batch ${rajashekar.batchNo}. I hail from ${rajashekar.city}, ${rajashekar.state}, ${rajashekar.country}.`)
+
+		// let likesIceCream = false
+		// console.log(`I ${likesIceCream ? 'like' : "don't like"} icecream!`)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			2. let, const
+			- var: global
+			- let: block
+			- const: block + constant
+		*/
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			3. Arrow function
+			- Syntactic sugar of anonymous function
+			- Syntax: () => {}
+		*/
+
+		// function abc() {
+		// 	console.log('abc')
+		// }
+
+		// // Anonymous Function
+		// const abc = function () { // Function expression
+		// 	console.log('abc')
+		// }
+
+		// Arrow Functions
+		// const abc = () => {
+		// 	console.log('abc')
+		// }
+
+		// const sum = (num1, num2) => {
+		// 	console.log(num1 + num2)
+		// }
+
+		// When 1 expression to execute or return
+		// const sum = (num1, num2) => console.log(num1 + num2)
+		// sum(9, 12)
+
+		// const sum = (num1, num2) => num1 + num2
+		// console.log(sum(14, 22))
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			4. Default Parameters
+		*/
+
+		// const sum = (num1 = 0, num2 = 0, num3 = 0) => {
+		// 	console.log(num1 + num2 + num3)
+		// }
+		// sum(4, 2, 9)
+		// sum(4, 2)
+		// sum(5)
+		// sum()
+
+		// const product = (num1 = 1, num2 = 1, num3 = 1) => {
+		// 	console.log(num1 * num2 * num3)
+		// }
+		// product(4, 2, 9)
+		// product(4, 2)
+		// product(5)
+		// product()
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			4. Exponential Operator (**)
+		*/
+
+		// console.log(5 ** 2)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			6. includes()
+			- Arrays and strings
+		*/
+
+		// console.log([2, -5, 3, 10, 32].includes(11))
+		// console.log('Abhishek'.includes('a'))
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			7. Spread Operator (... : Populate array/object entries)
+			- Arrays and Objects
+		*/
+
+		// let arr1 = [4, 2, 3, 12, 18]
+		// let arr2 = [10, 4, 23, 72, 98]
+
+		// let arr3 = [ ...arr1, ...arr2 ]
+		// console.log(arr3)
+
+		// console.log(arr1) 
+		// console.log(...arr1)
+
+		// let obj1 = { a: 5, b: 10 }
+		// let obj2 = { c: 12, d: 15 }
+		
+		// let obj3 = { ...obj1, ...obj2 }
+		// console.log(obj3)
+
+		// let obj1 = { a: 5, b: 10 }
+		// let obj2 = { b: 12, c: 15 }
+		
+		// let obj3 = { ...obj1, ...obj2 }
+		// console.log(obj3)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			8. Object Property Assignment (Key name = Variable name holding value)
+		*/
+
+		// let firstName = 'Shradha'
+		// let lastName = 'Andhare'
+
+		// let shradhaDetails = {
+		// 	firstName: firstName,
+		// 	lastName: lastName,
+		// }
+		// console.log(shradhaDetails)
+
+		// let shradhaDetails = { firstName, lastName }
+		// console.log(shradhaDetails)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			9. Destructing (Extracting key as a new variable with the same name)
+		*/
+
+		// let shradhaDetails = {
+		// 	firstName: 'Shradha',
+		// 	lastName: 'Andhare',
+		// }
+
+		// let firstName = shradhaDetails.firstName
+		// let lastName = shradhaDetails.lastName	
+		
+		// let {
+		// 	firstName,
+		// 	lastName
+		// } = shradhaDetails
+		// console.log(firstName, lastName)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			10. Object.entries(): Returns an array of key-value pairs of objects
+		*/
+
+		// let ravi = {
+		// 	firstName: 'Ravi',
+		// 	lastName: 'Chandra',
+		// }
+
+		// console.log(Object.keys(ravi)) // Returns an array of all the keys of that object
+		// console.log(Object.values(ravi)) // Returns an array of all the values of that object
+
+		// console.log(Object.entries(ravi))
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			11. Object.assign(): Cloning (Shallow)
+		*/
+
+		// let x = 5
+		// let y = x
+		// x = 10
+		// console.log(y)
+
+		// let obj1 = { a: 5, b: 10 }
+		// let obj2 = obj1
+		// obj1.a = 20
+		// console.log(obj2)
+
+		// Cloning (Copy)
+		// 1. Shallow Copy
+		// a. Spread Operator
+		// let obj1 = { a: 5, b: 10 }
+		// let obj2 = { ...obj1 }
+		// obj1.a = 20
+		// console.log(obj2)
+		
+		// b. Object.assign
+		// let obj1 = { a: 5, b: 10 }
+		// let obj2 = Object.assign({}, obj1)
+		// obj1.a = 20
+		// console.log(obj2)
+
+		// 2. Deep Copy
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: {
+		// 		x: 100,
+		// 		y: 500
+		// 	}
+		// }
+		// let obj2 = JSON.parse(JSON.stringify(obj1))
+		// obj1.c.x = 200
+		// console.log(obj2)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!-- [condition] ? [condition is true] : [condition is false] -->
